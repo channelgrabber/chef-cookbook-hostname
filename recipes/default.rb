@@ -25,10 +25,29 @@
 #
 
 fqdn = node['set_fqdn']
+puts "fdqn as set"
+puts fqdn
+puts fqdn
+puts fqdn
+puts fqdn
+puts fqdn
+puts fqdn
+puts fqdn
+puts "going into fdqn setup"
 if fqdn
   fqdn = fqdn.sub('*', node.name)
   fqdn =~ /^([^.]+)/
   hostname = fqdn
+
+  puts "hostname:"
+
+  puts hostname
+  puts hostname
+  puts hostname
+  puts hostname
+  puts hostname
+  puts hostname
+  puts hostname
 
   file '/etc/hostname' do
     content "#{hostname}\n"
